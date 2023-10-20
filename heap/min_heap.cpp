@@ -41,7 +41,7 @@ for(int i=1;i<=n;i++)
 cin>>a[i];
 }
 build_heap(a,n);
-cout<<"\nMax heap is: ";
+cout<<"\nMin heap is: ";
 for(int i=1;i<=n;i++)
 {
 cout<<a[i]<<" ";
