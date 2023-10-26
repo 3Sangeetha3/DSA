@@ -1,3 +1,4 @@
+//Max-heap taking index 0
 #include<iostream>
 using namespace std;
 
@@ -8,24 +9,21 @@ void maxheap(int a[],int k, int n)
     while(j<n)
     {
         if(a[j+1] > a[j])
-        j=j+1;
+            j=j+1;
         if(val > a[j])
-        break;
-        else{
-            if(j%2==0)
-            a[(j/2)-1] = a[j];
-            else
-            a[j/2] = a[j];
-            a[j] = val;
             break;
+        else{
+            a[(j-1)/2]=a[j];
+            j=2*j+1;
         }
-        return;
     }
+    a[(j-1)/2] = val;
+        return;
 }
 void build_heap(int a[], int n)
 {
     int k;
-    for( k = (n/2) -1 ;k>=0;k--)
+    for( k = (n/2)-1 ;k>=0;k--)
     {
         maxheap(a,k,n);
     }
