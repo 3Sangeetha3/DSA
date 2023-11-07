@@ -81,7 +81,7 @@ Node* deleteNode(Node* root, int item)
         }
         if(succParent == root)
         {
-            succParent->right = succ->right;
+            succParent->right = succ->left;
         }
         else{
             succParent->left = succ->right;
