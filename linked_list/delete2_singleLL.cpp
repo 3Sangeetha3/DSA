@@ -36,30 +36,41 @@ void create()
         }
     }
 }
+// void Delete()
+// {
+//     if (start != NULL) // Check if list is not empty
+//     {
+//         if (start->next == NULL) // If there's only one node in the list
+//         {
+//             delete start;
+//             start = NULL;
+//         }
+//         else
+//         {
+//             link* ptr = start;
+//             while (ptr->next->next != NULL) // Traverse until second last node
+//             {
+//                 ptr = ptr->next;
+//             }
+//             delete ptr->next; // Delete the last node
+//             ptr->next = NULL; // Update the next pointer of the second last node
+//         }
+//     }
+//     else
+//     {
+//         cout << "List is empty. Nothing to delete." << endl;
+//     }
+// }
 void Delete()
 {
-    if (start != NULL) // Check if list is not empty
-    {
-        if (start->next == NULL) // If there's only one node in the list
-        {
-            delete start;
-            start = NULL;
-        }
-        else
-        {
-            link* ptr = start;
-            while (ptr->next->next != NULL) // Traverse until second last node
+    link* ptr = start;
+            while (ptr->next->next != NULL) 
             {
                 ptr = ptr->next;
             }
-            delete ptr->next; // Delete the last node
-            ptr->next = NULL; // Update the next pointer of the second last node
-        }
-    }
-    else
-    {
-        cout << "List is empty. Nothing to delete." << endl;
-    }
+            //delete ptr->next;
+            delete node;
+            ptr->next = NULL;
 }
 
 void display()
