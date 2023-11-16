@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+int x,i,j;
 int partition(int a[],int low, int high)
 {
     int i = low;
