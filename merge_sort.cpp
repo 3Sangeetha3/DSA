@@ -27,7 +27,7 @@ void merge(int a[],int low, int mid, int high)
     {
         R[k++] = a[i];
     }
-    i=0,j=0,k=0;
+    i=0,j=0,k=low;  ///impaortant chnage 
     while(i<n1 && j<n2)
     {
         if(L[i]<=R[j])
