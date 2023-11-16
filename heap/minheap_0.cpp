@@ -12,15 +12,12 @@ void maxheap(int a[],int k, int n)
         if(val < a[j])
         break;
         else{
-            if(j%2==0)
-            a[(j/2)-1] = a[j];
-            else
-            a[j/2] = a[j];
-            a[j] = val;
-            break;
+            a[(j-1)/2] = a[j];
+            j = j*2+1;
         }
-        return;
     }
+    a[(j-1)/2] = val;
+    return;
 }
 void build_heap(int a[], int n)
 {
